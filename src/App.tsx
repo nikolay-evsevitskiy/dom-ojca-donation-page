@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import DonationPage from "./DonationPage";
 
 function App() {

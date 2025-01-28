@@ -4,7 +4,10 @@ import Button from "./common/button";
 import {Copy, Moon, Sun} from "lucide-react";
 import {motion} from "framer-motion";
 import "./DonationPage.css";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
+import lightLogo from "/mnt/data/Dom ojca_оригинал.png";
+import darkLogo from "/mnt/data/Dom ojca_белый логотип.png";
+
 
 interface BankAccountDetails {
     accountName: string;
@@ -15,7 +18,7 @@ interface BankAccountDetails {
 
 const DonationPage: React.FC = () => {
     const [theme, setTheme] = useState<string>("light");
-    const { t, i18n } = useTranslation<string>();
+    const {t, i18n} = useTranslation<string>();
 
     const bankAccountDetails: BankAccountDetails = {
         accountName: `Kościoł Chrześcijański "Dom Ojca" we Wrocławiu`,
@@ -40,13 +43,16 @@ const DonationPage: React.FC = () => {
     };
 
 
-
     return (
         <div className={`donation-page ${theme}`}>
             <div className="header">
                 <button className="theme-toggle" onClick={toggleTheme}>
                     {theme === "light" ? <Moon/> : <Sun/>}
-                    {theme === "light" ? "Темная тема" : "Светлая тема"}
+                    {theme === "light" ?
+                        // @ts-ignore
+                        t("darkTheme") :
+                        // @ts-ignore
+                        t("lightTheme")}
                 </button>
 
                 <select value={i18n.language} onChange={changeLanguage} className="language-select">
@@ -68,15 +74,24 @@ const DonationPage: React.FC = () => {
                     // @ts-ignore
                     t("title")
                 }</h1>
-                <p>Ваш вклад помогает поддерживать наши программы и миссию.</p>
+                <p>{
+                    // @ts-ignore
+                    t("description")
+                }</p>
             </motion.div>
 
             <Card className="card">
                 <CardContent>
-                    <h2>Реквезиты</h2>
+                    <h2>{
+                        // @ts-ignore
+                        t("accountName")
+                    }</h2>
                     <div className="account-details">
                         <div>
-                            <span>Получатель:</span>
+                            <span>{
+                                // @ts-ignore
+                                t("recipient")
+                            }:</span>
                             <span>{bankAccountDetails.accountName}</span>
                             <Button
                                 variant="ghost"
@@ -87,7 +102,10 @@ const DonationPage: React.FC = () => {
                             </Button>
                         </div>
                         <div>
-                            <span>Номер счета получателя:</span>
+                            <span>{
+                                // @ts-ignore
+                                t("accountNumber")
+                            }:</span>
                             <div className="iban">
                                 <span>{bankAccountDetails.iban}</span>
                                 <Button
@@ -100,7 +118,10 @@ const DonationPage: React.FC = () => {
                             </div>
                         </div>
                         <div>
-                            <span>Название:</span>
+                            <span>{
+                                // @ts-ignore
+                                t("paymentName")
+                            }:</span>
                             <div className="swift">
                                 <span>{bankAccountDetails.swift}</span>
                                 <Button
@@ -118,7 +139,10 @@ const DonationPage: React.FC = () => {
             </Card>
 
             <footer>
-                <p>Спасибо за вашу поддержку. Пусть Бог благословит вас!</p>
+                <p>{
+                    // @ts-ignore
+                    t("thanks")
+                }</p>
             </footer>
         </div>
     );

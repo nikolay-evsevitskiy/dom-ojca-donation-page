@@ -4,6 +4,7 @@ import Button from "./common/button";
 import {Copy, Moon, Sun} from "lucide-react";
 import {motion} from "framer-motion";
 import "./DonationPage.css";
+import { useTranslation } from "react-i18next";
 
 interface BankAccountDetails {
     accountName: string;
@@ -14,7 +15,7 @@ interface BankAccountDetails {
 
 const DonationPage: React.FC = () => {
     const [theme, setTheme] = useState<string>("light");
-    const [language, setLanguage] = useState<string>("ru");
+    const { t, i18n } = useTranslation<string>();
 
     const bankAccountDetails: BankAccountDetails = {
         accountName: `Kościoł Chrześcijański "Dom Ojca" we Wrocławiu`,
@@ -25,7 +26,8 @@ const DonationPage: React.FC = () => {
 
     const copyToClipboard = (text: string): void => {
         navigator.clipboard.writeText(text);
-        alert("Данные скопированы в буфер обмена");
+        // @ts-ignore
+        alert(t("copy"));
     };
 
     const toggleTheme = (): void => {
@@ -34,8 +36,10 @@ const DonationPage: React.FC = () => {
     };
 
     const changeLanguage = (event: React.ChangeEvent<HTMLSelectElement>): void => {
-        setLanguage(event.target.value);
+        i18n.changeLanguage(event.target.value);
     };
+
+
 
     return (
         <div className={`donation-page ${theme}`}>
@@ -45,7 +49,7 @@ const DonationPage: React.FC = () => {
                     {theme === "light" ? "Темная тема" : "Светлая тема"}
                 </button>
 
-                <select value={language} onChange={changeLanguage} className="language-select">
+                <select value={i18n.language} onChange={changeLanguage} className="language-select">
                     <option value="en">English</option>
                     <option value="uk">Українська</option>
                     <option value="ru">Русский</option>
@@ -60,7 +64,10 @@ const DonationPage: React.FC = () => {
                 animate={{opacity: 1, y: 0}}
                 transition={{duration: 0.5}}
             >
-                <h1>Пожертвование для церкви Dom Ojca</h1>
+                <h1>{
+                    // @ts-ignore
+                    t("title")
+                }</h1>
                 <p>Ваш вклад помогает поддерживать наши программы и миссию.</p>
             </motion.div>
 

@@ -15,6 +15,7 @@ const resources = {
             thanks: "Thank you for your support. May God bless you!",
             darkTheme: "Dark Theme",
             lightTheme: "Light Theme",
+            copy: "copied",
         },
     },
     ru: {
@@ -29,6 +30,7 @@ const resources = {
             thanks: "Спасибо за вашу поддержку. Пусть Бог благословит вас!",
             darkTheme: "Темная тема",
             lightTheme: "Светлая тема",
+            copy: "скопировано",
         },
 
     },
@@ -44,6 +46,7 @@ const resources = {
             thanks: "Dziękujemy za Twoje wsparcie. Niech Bóg Cię błogosławi!",
             darkTheme: "Ciemny motyw",
             lightTheme: "Jasny motyw",
+            copy: "skopiowane",
         },
 
     },
@@ -59,6 +62,7 @@ const resources = {
             thanks: "Дзякуй за вашу падтрымку. Няхай Бог вас дабраславіць!",
             darkTheme: "Цёмная тэма",
             lightTheme: "Светлая тэма",
+            copy: "скапіяваны",
         },
 
     },
@@ -74,6 +78,7 @@ const resources = {
             thanks: "Дякуємо за вашу підтримку. Нехай Бог вас благословить!",
             darkTheme: "Темна тема",
             lightTheme: "Світла тема",
+            copy: "скопійований",
         },
 
     },

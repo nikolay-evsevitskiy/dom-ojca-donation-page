@@ -5,8 +5,8 @@ import {Copy, Moon, Sun} from "lucide-react";
 import {motion} from "framer-motion";
 import "./DonationPage.css";
 import {useTranslation} from "react-i18next";
-import lightLogo from "/mnt/data/Dom ojca_оригинал.png";
-import darkLogo from "/mnt/data/Dom ojca_белый логотип.png";
+import lightLogo from "./logo/Dom_ojca_light.png";
+import darkLogo from "./logo/Dom_ojca_dark.png";
 
 
 interface BankAccountDetails {
@@ -63,6 +63,8 @@ const DonationPage: React.FC = () => {
                     <option value="be">Беларуская</option>
                 </select>
             </div>
+
+            <img src={theme === "light" ? darkLogo : lightLogo} alt="Dom Ojca Logo" className="logo-img"/>
 
             <motion.div
                 className="title-section"

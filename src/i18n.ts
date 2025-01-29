@@ -7,8 +7,8 @@ const resources = {
         translation: {
             title: "Donation for the Dom Ojca Church",
             description: "Your contribution helps support our programs and mission.",
-            accountName: "Account Name",
-            recipient: "IBAN",
+            accountName: "Requisites",
+            recipient: "Recipient",
             accountNumber: "Account number",
             paymentName: "Payment name",
             donate: "Proceed to Payment",

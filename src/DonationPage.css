@@ -25,6 +25,11 @@ body.dark {
     padding: 20px;
 }
 
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -67,8 +72,10 @@ body.dark {
     color: #6b7280;
 }
 .logo-img {
-    width: 20%;
-    height: 20%;
+    width: 30%;
+    height: 30%;
+    min-height: 200px;
+    min-width: 200px;
 }
 .card {
     width: 100%;
@@ -89,6 +96,7 @@ body.dark {
     margin-bottom: 10px;
 }
 
+.recipient,
 .iban,
 .swift {
     display: flex;
@@ -133,4 +141,14 @@ footer {
         max-width: 100%;
         padding: 10px;
     }
+    .card {
+        width: 90%;
+        margin: 10px 20px 10px 20px;
+
+    }
+    .card-span-name {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
 }

@@ -90,21 +90,23 @@ const DonationPage: React.FC = () => {
                     }</h2>
                     <div className="account-details">
                         <div>
-                            <span>{
+                            <span className="card-span-name">{
                                 // @ts-ignore
                                 t("recipient")
                             }:</span>
-                            <span>{bankAccountDetails.accountName}</span>
-                            <Button
-                                variant="ghost"
-                                size="sm"
-                                onClick={() => copyToClipboard(bankAccountDetails.accountName)}
-                            >
-                                <Copy/>
-                            </Button>
+                            <div className="recipient">
+                                <span>{bankAccountDetails.accountName}</span>
+                                <Button
+                                    variant="ghost"
+                                    size="sm"
+                                    onClick={() => copyToClipboard(bankAccountDetails.accountName)}
+                                >
+                                    <Copy/>
+                                </Button>
+                            </div>
                         </div>
                         <div>
-                            <span>{
+                            <span className="card-span-name">{
                                 // @ts-ignore
                                 t("accountNumber")
                             }:</span>
@@ -120,7 +122,7 @@ const DonationPage: React.FC = () => {
                             </div>
                         </div>
                         <div>
-                            <span>{
+                            <span className="card-span-name">{
                                 // @ts-ignore
                                 t("paymentName")
                             }:</span>

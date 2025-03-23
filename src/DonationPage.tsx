@@ -22,7 +22,7 @@ const DonationPage: React.FC = () => {
 
     const bankAccountDetails: BankAccountDetails = {
         accountName: `Kościoł Chrześcijański "Dom Ojca" we Wrocławiu`,
-        iban: "9625 2530 0008 2056 1056 5283 0001",
+        iban: "96 2530 0008 2056 1056 5283 0001",
         swift: "dziesięcina",
     };
 

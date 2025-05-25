@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/dom-ojca-donation-page/static/css/main.f4dcd9f5.css",
-    "main.js": "/dom-ojca-donation-page/static/js/main.3bcc935d.js",
+    "main.js": "/dom-ojca-donation-page/static/js/main.ed41e7ab.js",
     "static/js/453.5f28b517.chunk.js": "/dom-ojca-donation-page/static/js/453.5f28b517.chunk.js",
     "static/media/Dom_ojca_dark.png": "/dom-ojca-donation-page/static/media/Dom_ojca_dark.688d418965ee86c23a4b.png",
     "static/media/Dom_ojca_light.png": "/dom-ojca-donation-page/static/media/Dom_ojca_light.609e9b49ec76c03db872.png",
     "index.html": "/dom-ojca-donation-page/index.html",
     "main.f4dcd9f5.css.map": "/dom-ojca-donation-page/static/css/main.f4dcd9f5.css.map",
-    "main.3bcc935d.js.map": "/dom-ojca-donation-page/static/js/main.3bcc935d.js.map",
+    "main.ed41e7ab.js.map": "/dom-ojca-donation-page/static/js/main.ed41e7ab.js.map",
     "453.5f28b517.chunk.js.map": "/dom-ojca-donation-page/static/js/453.5f28b517.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f4dcd9f5.css",
-    "static/js/main.3bcc935d.js"
+    "static/js/main.ed41e7ab.js"
   ]
 }
